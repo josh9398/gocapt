@@ -1,2 +1,3 @@
-# gocapt
-Capture traffic
+## Gocapt
+
+Capture traffic.
