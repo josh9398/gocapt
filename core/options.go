@@ -1,6 +1,6 @@
 package core
 
-import "fmt"
+import "flag"
 
 type Options struct {
     InterfaceName *string
@@ -8,10 +8,10 @@ type Options struct {
 
 func GetOptions() (Options, error) {
     o := Options{
-        InterfaceName: flag.String("iface", "Network interface to bind to, if empty the default interface will be auto selected.")
+        InterfaceName: flag.String("iface",  "","Network interface to bind to, if empty the default interface will be auto selected."),
     }
 
-    flag.Parse
+    flag.Parse()
 
     return o, nil
 }

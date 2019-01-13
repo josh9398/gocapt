@@ -2,18 +2,15 @@ package main
 
 import (
     "fmt"
-    "github.com:josh9398/gocapt/core"
+    "log"
+    "./core"
 )
 
 func main() {
     fmt.Println("Hello World")
-    opts, err := core.ParseOptions()
+    opts, err := core.GetOptions()
     if err != nil {
-        return nil, err
+        log.Fatal(err)
     }
-    if opts.InterfaceName == "" {
-        fmt.Println("No arg")
-    } else {
-        fmt.Println(opts.InterfaceName)
-    }
+    fmt.Println(*opts.InterfaceName)
 }
