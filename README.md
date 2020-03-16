@@ -1,3 +1,3 @@
 ## Gocapt
 
-Capture traffic.
+Capture packets on an interface
